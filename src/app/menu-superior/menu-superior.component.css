@@ -1,0 +1,19 @@
+/*Menu Superior*/
+.logo{
+    margin: 1% 0% 1% 5%;
+}
+.navbar-nav{
+    margin-right: 5%;
+}
+.navbar-nav li{
+    margin-right: 40px;
+    margin-left: 20px;
+    background-color: white;
+}
+.navbar-nav li a{
+    color: black;
+}
+
+#navbarNavDropdown {
+    justify-content: end;
+}
