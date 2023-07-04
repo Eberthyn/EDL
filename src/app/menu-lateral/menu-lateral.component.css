@@ -1,0 +1,47 @@
+nav {
+  background-color: #f4f4f4;
+  padding: 8px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 4px 8px;
+  display: block;
+}
+
+a:hover {
+  background-color: #e6e6e6;
+}
+
+li.active {
+  background-color: #0072c3;
+  color: #fff;
+}
+
+
+nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 8px;
+  overflow-y: auto;
+}
+
+/* Ajuste o estilo do conteúdo principal à direita */
+.main-content {
+  margin-left: 200px; /* Ajuste a largura da tabela de conteúdos conforme necessário */
+  padding: 16px;
+}

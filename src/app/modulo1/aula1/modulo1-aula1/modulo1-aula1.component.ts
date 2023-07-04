@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class Modulo1Aula1Component {
 
+  sections = [
+    { id: 'section1', title: 'Section 1' },
+    { id: 'section2', title: 'Section 2' },
+    { id: 'section3', title: 'Section 3' }
+  ];
+
 }
