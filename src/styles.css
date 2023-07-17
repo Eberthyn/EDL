@@ -1,56 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import '~bootstrap/dist/css/bootstrap.min.css';
+@import './assets/normalize.css';
 
 body, header, footer{
     font-family: 'Noto Sans', sans-serif;
     font-size: 15px;
 }
-/*Page Home*/
-.navbar{
-    background-color: white;
-}
-.fundoCapa{
-    background-color: #EE8706;
-}
-.capa{
-    background-image: url(assets/images/home/imgCapa.png);
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.capa h1{
-    color: white;
-    position: absolute;
-    font-size:2.2vw;
-    left: 5%;
-    right: 5%;
-    /*transform: translate(-25%);*/
-}
-#fundoTexto{
-    background-color: #f5f5f5;
-}
-#textoCapa{
-    padding: 60px 24%;
 
-}
-.tooltipStyle{
-    font-weight: 600;
-    color: #EE8706 !important;
-}
 
 /*Botão*/
 #botao{
     text-align: center;
-    background-color: #f5f5f5;
+    background-color: #EBE6E2;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#botaoComecar{
-    background-color: #EE8706;
+#botaoAvancar{
+    background-color: #9A7265;
     border-radius: 25px;
     color: white;
     width: 150px;
@@ -90,3 +57,118 @@ li{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/*Conteúdo*/
+.conteudo{
+    padding: 0% 12% 0% 12% !important;
+    margin: 0% !important;
+}
+#inicioAula1, #inicioAula2, #inicioAula3, #inicioAula4, #inicioAula5, #inicioAula6{
+    margin-top: -1.4px;
+}
+.row{
+    margin: 0px !important;
+}
+.cardImg{
+    position: relative;
+}
+#questionario{
+    margin-left: 9.5% !important;
+    margin-right: 9.5% !important;
+}
+#cartaz{
+    margin-top: 50px !important;
+    color: #ff6f61;
+    font-weight: bold;
+}
+.estilo{
+   margin-left: 9.5% !important;
+   background-color: #443F57;
+}
+.col-md-2{
+    transition: all 0s;
+    padding-left: 0px !important;
+    background-color: #F5F5F5;
+    position: relative;
+}
+.col-md-10{
+    padding: 0px !important;
+    max-width: 100%;
+}
+.col-md-12{
+    padding: 0% !important;
+    margin-left: auto;
+}
+.blocoTexto{
+    background-color: #ff6f61;
+    color: white;
+    padding-top: 30px;
+}
+.blocoStyle1{
+    padding: 25px 100px 10px 0px !important;
+}
+.blocoStyle2{
+    padding: 50px 50px 50px 0px !important;
+}
+.blocoTexto li{
+    list-style: none;
+}
+.blocoTexto .pinfo{
+    margin-top: 10px !important;
+    margin-left: 40px;  
+}
+
+
+/* Formatação de Fontes*/
+h1{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    max-width: 58ch;
+}
+h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+h3{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+p{
+    margin-bottom: 30px;
+}
+
+p.tituloLista{
+    margin: 0px;
+    font-weight: bold;
+}
+p.textoLaranja{
+    max-width: 100% !important;
+    color: #ff6f61;
+    font-weight: bold;
+    font-style: italic;
+}
+.pinfo{
+    font-size: 16px; 
+    font-weight: 600;
+}
+.titulo{
+    text-align: center;
+    color: #ff6f61;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 50px;
+}
+.card-title{
+    margin-top: 0px !important;
+    font-size:max(15px, 1.3vw);
+}
+
+.video{
+    margin-bottom: 24px !important;
+}

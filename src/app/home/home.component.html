@@ -2,51 +2,93 @@
 <app-menu-superior></app-menu-superior>
 
 <!-- Capa do Curso -->
-<div class="container-fluid content">
+<div class="capa">
+    <img src="assets/images/home/imgCapa.png" class="img-fluid" alt="Capa do Curso">
+</div>
 
-    <!-- Imagem de Capa -->
-    <div class="row fundoCapa">
-        <div class="col-lg-8 offset-lg-2">
-            <div class="capa">
+<!-- Introdução -->
+<div class="conteudo">
+    <h1>Olá, seja bem-vindo(a) ao curso Estratégia de Disseminação de Larvicida para combate ao mosquito Aedes.</h1>
 
-                <h1 class="text-center"><b>Instrumentos para o enfrentamento de emergências de saúde pública no
-                        contexto da sociedade
-                        civil</b></h1>
+    <p>Você irá conhecer neste curso a Estratégia de Disseminação de Larvicida (EDL), que é uma tática muito promissora
+        no combate aos mosquitos, pois algumas espécies de mosquitos Aedes usam, frequentemente, criadouros crípticos ou
+        situados em locais inacessíveis, muitas vezes difíceis de detectar pelos agentes de combate às endemias (ACE).
+    </p>
+    <p>Este curso está direcionado aos agentes de saúde, estudantes, pesquisadores e profissionais de saúde que atuam ou
+        pretendem atuar no combate aos mosquitos Aedes, e, visa exemplificar a eficiência do combate aos mosquitos Aedes
+        por meio de disseminação de larvicidas, pelos próprios mosquitos.</p>
+    <p>Assista ao vídeo de apresentação do curso e veja os principais temas que serão abordados.</p>
 
-                <img src="assets/images/fundoImg.png" class="img-fluid" alt="Capa do Curso">
+    <h2>Vídeo de apresentação do Curso</h2>
+    <p>Vídeo de apresentação do Curso!</p>
+
+    <!-- Video 1 -->
+    <div class="row justify-content-center">
+        <div class="video col-md-8">
+            <div class="embed-responsive embed-responsive-16by9">
+                <video width="560" height="315" class="embed-responsive-item" controls>
+                    <source src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" type="video/mp4" frameborder="0"
+                        allow="encrypted-media" allowfullscreen="allowfullscreen">
+                </video>
             </div>
+            <small class="text-muted">Crédito Vídeo</small>
         </div>
     </div>
-    <!-- Fim Imagem de Capa-->
+</div>
 
-    <!-- Introdução -->
-    <div class="row" id="fundoTexto">
 
-        <div id="textoCapa">
-            <p>As emergências de saúde pública exigem preparação local e internacional robusta com respostas rápidas
-                para salvar vidas.
-                Este curso reúne informações e instrumentos a fim de apoiar a sociedade civil e os movimentos
-                sociais na América Latina na resposta às emergências de saúde pública que afetam suas populações.
-            </p>
+<!-- Instruções -->
+<div class="row fundoCapa">
+    <img src="assets/images/home/img1.png" alt="">
+</div>
 
-            <p>Você irá conhecer como opera a governança global, formas de atuação da sociedade civil e instrumentos
-                para apoiar a atuação como mediadores e produtores de conhecimento por meio do fortalecimento da
-                vigilância popular e do ativismo digital.</p>
+<div class="conteudo fundoTexto">
 
-            <p>Bom curso!</p>
-        </div>
-    </div>
-    <!-- Fim Introdução -->
+    <h1>Conheça o conteúdo</h1>
 
-    <!-- Botão Início Aula 1-->
+    <ul>
+        <p><b>Introdução</b></p>
+
+        <p class="tituloLista">Módulo 1: Combate ao mosquito Aedes</p>
+        <ul>
+            <li>Biologia, Ecologia e controle de Aedes</li>
+            <li>História do controle de Aedes aegypti no Brasil</li>
+            <li>Inseticidas reguladores de crescimento</li>
+            <li>O que é uma Estação Disseminadora de Larvicida (EDL) e como funciona?</li>
+            <li>Atividade</li>
+        </ul>
+
+        <br>
+
+        <p class="tituloLista">Módulo 2: Implantação, manutenção e distribuição das EDL</p>
+        <ul>
+            <li>Implantação das EDL</li>
+            <li>Procedimento de manutenção e registro da EDL</li>
+            <li>Supervisão da EDL</li>
+            <li>Logística estratégica e operacional</li>
+            <li>Atividade</li>
+        </ul>
+    </ul>
+
+    <h1>Objetivos</h1>
+
+    <ul>
+        <li>Compreender a estratégia de disseminação de larvicida por mosquitos no controle de arboviroses.
+        </li>
+        <li>Identificar os aspectos básicos da utilização de Estações Disseminadoras de Larvicida no controle de
+            arboviroses.</li>
+        <li>Compreender os procedimentos necessários para a implantação e manutenção de Estações Disseminadoras de
+            Larvicida.</li>
+    </ul>
+
+    <!-- Botão Início Aula 1 -->
     <div class="row" id="botao">
-        <button class="btn btn-sm" id="botaoComecar" role="button" aria-pressed="true" alt="Começar curso" (click)="ir()">
-            <strong>COMEÇAR</strong>
+        <button class="btn btn-sm" id="botaoAvancar" role="button" aria-pressed="true" alt="Começar curso"
+            (click)="ir()">
+            <strong>AVANÇAR</strong>
         </button>
     </div>
-
-    <!-- Rodapé -->
-    <app-rodape></app-rodape>
-
 </div>
-<!-- Fim da Capa do Curso -->
+
+<!-- Rodapé -->
+<app-rodape></app-rodape>

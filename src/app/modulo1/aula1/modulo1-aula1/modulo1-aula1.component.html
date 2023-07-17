@@ -1,6 +1,12 @@
 <app-menu-superior></app-menu-superior>
-<app-menu-lateral [sections]="sections"></app-menu-lateral>
 
+<div class="row" id="row-main">
+
+  <div class="col-md-2">
+    <app-menu-lateral [sections]="sections"></app-menu-lateral>
+  </div>
+
+<div class="col-md-10">
 <div class="main-content">
     <!-- Conteúdo principal aqui -->
     <section id="section1">
@@ -18,5 +24,6 @@
       <p>Content of section 3.</p>
     </section>
   </div>
-  
-<app-rodape></app-rodape>
+  </div>
+
+<app-rodape></app-rodape></div>
