@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatStepperModule } from '@angular/material/stepper';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +19,7 @@ import { Modulo1Aula3Component } from './modulo1/aula3/modulo1-aula3/modulo1-aul
 import { Modulo2Aula1Component } from './modulo2/aula1/modulo2-aula1/modulo2-aula1.component';
 import { Modulo2Aula2Component } from './modulo2/aula2/modulo2-aula2/modulo2-aula2.component';
 import { Modulo2Aula3Component } from './modulo2/aula3/modulo2-aula3/modulo2-aula3.component';
-
+import { SharedService } from './services/shared.service';
 
 @NgModule({
   declarations: [
@@ -45,12 +42,9 @@ import { Modulo2Aula3Component } from './modulo2/aula3/modulo2-aula3/modulo2-aul
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatListModule,
-    MatIconModule,
-    MatStepperModule,
-    MatSidenavModule,
+    MatIconModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

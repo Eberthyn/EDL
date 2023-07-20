@@ -1,9 +1,20 @@
-<nav>
+<!-- Botão p/ Recolher Sidebar-->
+<span class="toggle-sidebar" id="sidebarButton" (click)="abrirMenu()"><mat-icon>keyboard_arrow_left</mat-icon></span>
+
+<!-- Botão Secundário p/ Recolher Sidebar -->
+<span class="toggle-sidebar" id="sidebarButton2" (click)="abrirMenu()"><img style="max-width: 50%;"
+    src="../../assets/images/icones/icone.png" alt="Botão do Menu Lateral"></span>
+
+<nav id="menuLateral">
   <ul>
-    <li *ngFor="let section of sections" [class.active]="isSectionInView(section.id)">
-      <a (click)="scrollToSection(section.id)">
-        {{ section.title }}
-      </a>
+    <li *ngFor="let section of sections">
+      <p class="tituloLista" *ngIf="section.id === 'section1'">MODULO 1</p>
+      <p class="tituloLista" *ngIf="section.id === 'section4'">MODULO 2</p>
+      <div class="barraStepper" [class.active]="isSectionInView(section.id)">
+        <a (click)="scrollToSection(section.id)">
+          {{ section.title }}
+        </a>
+      </div>
     </li>
   </ul>
 </nav>

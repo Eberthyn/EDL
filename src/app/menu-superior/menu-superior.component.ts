@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-menu-superior',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class MenuSuperiorComponent {
 
+  constructor(private sharedService: SharedService) { }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    this.sharedService.onWindowScroll()
+  }
 }

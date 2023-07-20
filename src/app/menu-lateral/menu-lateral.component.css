@@ -1,12 +1,19 @@
-ul {
+nav {
+  background-color: #EBE6E2;
+  padding: 8px;
+  overflow-y: auto;
+  width: 16.667%;
+  height: auto;
   position: fixed;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+  z-index: 1;
+  overflow: auto;
+  display: block;
 }
 
-li {
-  margin-bottom: 4px;
+ul {
+  position: fixed;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -14,29 +21,110 @@ a {
   color: #333;
   padding: 4px 8px;
   display: block;
+  cursor: pointer;
 }
 
-a:hover {
-  background-color: #e6e6e6;
+/* Stepper */
+.barraStepper {
+  background-color: #D5CFCF;
+  width: 4px;
 }
 
-li.active {
-  background-color: #0072c3;
-  color: #fff;
+.barraStepper.active {
+  background-color: #2F6C48;
+}
+
+/* Botões */
+#sidebarButton {
+  position: fixed;
+  background-color: #EBE6E2;
+  border-radius: 0 0 5px 0;
+  padding: 0px !important;
+  margin-left: 16.667%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 35px;
+  width: 35px;
+  z-index: 2;
+}
+
+#sidebarButton.open {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-left: 0 !important;
+}
+
+/* Botão fixo no conteúdo apos recolher*/
+#sidebarButton2 {
+  position: fixed;
+  background-color: #EBE6E2;
+  border-radius: 0 0 5px 0;
+  padding: 0% !important;
+  margin-left: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 35px;
+  width: 35px;
+  z-index: 3;
+}
+
+#sidebarButton2 img {
+  margin-bottom: 0px !important;
+}
+
+#sidebarButton2.open {
+  margin-bottom: 0px !important;
+}
+
+.step {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+/* Recolher sidebar */
+#sidebar {
+  z-index: 1000;
+  /* width: 100%; */
 }
 
 
-nav {
-  left: 0;
-  top: 0;
-  height: 100vh;
-  background-color: #f4f4f4;
-  padding: 8px;
-  overflow-y: auto;
+
+/* Recolhe Sidebar */
+@media (min-width: 980px) {
+  .esconder {
+    display: block;
+    margin-left: -16.6667%;
+  }
+
+  #sidebarButton2 {
+    display: none;
+  }
 }
 
-/* Ajuste o estilo do conteúdo principal à direita */
-.main-content {
-  margin-left: 200px; /* Ajuste a largura da tabela de conteúdos conforme necessário */
-  padding: 16px;
+@media (max-width: 980px) {
+  nav {
+    width: 50% !important;
+    height: 100% !important;
+  }
+
+  #sidebarButton {
+    display: none;
+  }
+
+  #sidebar {
+    width: 50% !important;
+  }
+
+  .esconder {
+    display: none;
+  }
 }
