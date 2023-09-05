@@ -1,5 +1,6 @@
 import { Component, Input, HostListener, OnInit, Renderer2, ElementRef } from '@angular/core';
 import { SharedService } from '../services/shared.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-lateral',
@@ -10,16 +11,25 @@ export class MenuLateralComponent implements OnInit {
   @Input()
   activeSection!: string;
   sections = [
-    { id: 'section1', title: 'Section 1' },
-    { id: 'section2', title: 'Section 2' },
-    { id: 'section3', title: 'Section 3' },
-    { id: 'section4', title: 'Section 4' },
-    { id: 'section5', title: 'Section 5' },
-    { id: 'section6', title: 'Section 6' }
+    { id: '0', title: 'Introdução', url: 'introducao' },
+    { id: '1', title: 'Módulo 1: Combate ao mosquito Aedes', url: 'introducao-modulo1' },
+    { id: '2', title: 'Aspectos básicos da biologia, ecologia e controle de Aedes', url: 'modulo1-aula1' },
+    { id: '3', title: 'Inseticidas reguladores de crescimento', url: 'modulo1-aula2' },
+    { id: '4', title: 'O que é uma Estação Disseminadora de Larvicida (EDL) e como funciona?', url: 'modulo1-aula3' },
+    { id: '5', title: 'Atividade', url: 'atividade-modulo1' },
+    { id: '6', title: 'Módulo 2: Implantação, manutenção e distribuição da EDL', url: 'introducao-modulo2' },
+    { id: '7', title: 'Implantação da EDL', url: 'modulo2-aula1' },
+    { id: '8', title: 'Manutenção e registro da EDL', url: 'modulo2-aula2' },
+    { id: '9', title: 'Métodos de distribuição em campo da EDL', url: 'modulo2-aula3' },
+    { id: '10', title: 'Supervisão da EDL', url: 'modulo2-aula4' },
+    { id: '11', title: 'Logística estratégica e operacional', url: 'modulo2-aula5' },
+    { id: '12', title: 'Atividade', url: 'atividade-modulo2' },
+    { id: '13', title: 'Encerramento', url: 'encerramento' }
   ];
 
   constructor(
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -58,13 +68,15 @@ export class MenuLateralComponent implements OnInit {
     }
   }
 
-  isSectionInView(sectionId: string): boolean {
-    return this.activeSection === sectionId;
+  isSectionInView(section: any): boolean {
+    return this.activeSection === section.id;
   }
 
-  scrollToSection(sectionId: string): void {
-    this.activeSection = sectionId;
-    const element = document.getElementById(sectionId);
+  goToSection(section: any): void {
+    this.router.navigate([section.url]);
+
+    this.activeSection = section.id;
+    const element = document.getElementById(section.id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }

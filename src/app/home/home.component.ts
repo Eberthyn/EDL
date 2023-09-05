@@ -12,6 +12,6 @@ export class HomeComponent {
   ) { }
 
   ir() {
-    this.router.navigate(['modulo1-aula1'])
+    this.router.navigate(['introducao'])
   }
 }

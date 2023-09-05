@@ -1,0 +1,41 @@
+<section id="6">
+    <!-- Toolbar -->
+    <app-menu-superior></app-menu-superior>
+
+    <div class="row" id="row-main">
+        <!-- Sidebar -->
+        <div class="col-md-2" id="sidebar">
+            <app-menu-lateral></app-menu-lateral>
+        </div>
+
+        <div class="col-md-10" id="content">
+            <!-- Introdução -->
+            <div class="conteudo">
+                <h1>Implantação, manutenção e distribuição da EDL</h1>
+
+                <p>Neste módulo, você irá conhecer como ocorre o processo de implantação e manutenção das Estações
+                    Disseminadoras de Larvicida (EDL’s). Sua composição, montagem e utilização prática para combate ao
+                    mosquito <i>Aedes</i>.</p>
+
+                <h2>Objetivos:</h2>
+                <p>Ao final deste módulo, esperamos que você seja capaz de:</p>
+                <ul>
+                    <li>Compreender os procedimentos necessários para a implantação e manutenção de Estações
+                        Disseminadoras de Larvicida.</li>
+                </ul>
+
+                <!-- Botão Início Aula 1 -->
+                <div class="row" id="botao">
+                    <button class="btn btn-sm" id="botaoVoltar" role="button" aria-pressed="true" alt="Voltar"
+                        (click)="voltar()"><strong>VOLTAR</strong></button>
+                    <button class="btn btn-sm" id="botaoAvancar" role="button" aria-pressed="true" alt="Começar curso"
+                        (click)="ir()">
+                        <strong>AVANÇAR</strong>
+                    </button>
+                </div>
+            </div>
+            <!-- Rodapé -->
+            <app-rodape></app-rodape>
+        </div>
+    </div>
+</section>

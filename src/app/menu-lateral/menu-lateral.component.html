@@ -8,12 +8,17 @@
 <nav id="menuLateral">
   <ul>
     <li *ngFor="let section of sections">
-      <p class="tituloLista" *ngIf="section.id === 'section1'">MODULO 1</p>
-      <p class="tituloLista" *ngIf="section.id === 'section4'">MODULO 2</p>
-      <div class="barraStepper" [class.active]="isSectionInView(section.id)">
-        <a (click)="scrollToSection(section.id)">
-          {{ section.title }}
-        </a>
+      <div class="row">
+        <div class="barraStepper" [class.active]="isSectionInView(section)"></div>
+        <div class="sectionTitle">
+          <p [ngClass]="{'tituloLista': section.id === '0' ||
+           section.id === '1' || 
+           section.id === '6' || 
+           section.id === '13'}">
+            <a (click)="goToSection(section)">
+              {{ section.title }}</a>
+          </p>
+        </div>
       </div>
     </li>
   </ul>

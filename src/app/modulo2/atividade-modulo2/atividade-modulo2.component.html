@@ -1,0 +1,50 @@
+<section id="12">
+    <app-menu-superior></app-menu-superior>
+
+    <div class="row" id="row-main">
+        <!-- Sidebar -->
+        <div class="col-md-2" id="sidebar">
+            <app-menu-lateral></app-menu-lateral>
+        </div>
+
+        <div class="col-md-10" id="content">
+            <div class="conteudo">
+                <h1>Muito bem, você chegou ao final do módulo 2</h1>
+
+                <h3>Vamos fixar alguns pontos aprendidos até aqui? Vamos lá!</h3>
+                <div>
+                    <ol>
+                        <li *ngFor="let pergunta of perguntas">
+                            {{ pergunta.texto }}
+                            <br>
+                            <div class="input-radio" *ngFor="let opcao of opcoesResposta">
+                                <input type="radio" [(ngModel)]="pergunta.resposta" [name]="pergunta.id"
+                                    [value]="opcao.valor" (change)="verificarResposta(pergunta)">
+
+                                <label
+                                    [ngClass]="{'resposta-correta': pergunta.resposta === opcao.valor && pergunta.resposta === pergunta.respostaCorreta, 'resposta-incorreta': pergunta.resposta === opcao.valor && pergunta.resposta !== pergunta.respostaCorreta}">
+                                    <div class="radio-btn"></div>
+                                    {{opcao.texto}}
+                                </label>
+                            </div>
+                            <br>
+                            <p>{{ pergunta.resultado }}</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Botão Início Aula 1 -->
+                <div class="row" id="botao">
+                    <button class="btn btn-sm" id="botaoVoltar" role="button" aria-pressed="true" alt="Voltar"
+                        (click)="voltar()"><strong>VOLTAR</strong></button>
+                    <button [disabled]="!todasAsRespostasForamSelecionadas()" class="btn btn-sm" id="botaoAvancar"
+                        role="button" aria-pressed="true" alt="Começar curso" (click)="ir()">
+                        <strong>AVANÇAR</strong>
+                    </button>
+                </div>
+            </div>
+            <!-- Rodapé -->
+            <app-rodape></app-rodape>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,66 @@
+<section id="13">
+    <!-- Toolbar -->
+    <app-menu-superior></app-menu-superior>
+
+    <div class="row" id="row-main">
+        <!-- Sidebar -->
+        <div class="col-md-2" id="sidebar">
+            <app-menu-lateral></app-menu-lateral>
+        </div>
+
+        <div class="col-md-10" id="content">
+            <!-- Introdução -->
+            <div class="conteudo">
+                <h2>Assista ao vídeo de encerramento do curso e revise os principais pontos aprendidos.</h2>
+
+                <!-- Video 1 -->
+                <div class="row justify-content-center">
+                    <div class="video col-md-8">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video width="560" height="315" class="embed-responsive-item" controls>
+                                <source src="https://educare.fiocruz.br/file-storage/O8piacCS" type="video/mp4"
+                                    frameborder="0" allow="encrypted-media" allowfullscreen="allowfullscreen">
+                            </video>
+                        </div>
+                        <small class="text-muted">Crédito Vídeo</small>
+                    </div>
+                </div>
+
+                <h2>Esse curso tem certificação pelo <u>Campus Virtual Fiocruz</u>. Para receber o certificado, é
+                    preciso:</h2>
+
+                <ul>
+                    <li class="icon arrow">Estar matriculado no curso pelo Campus Virtual</li>
+                    <li class="icon arrow">Fazer a avaliação final e obter um aproveitamento de 70%</li>
+                </ul>
+
+                <div class="row">
+                    <div class="col-md-6 botao centro">
+                        <p>Se você já está matriculado,<br>vá direto para a avaliação:</p>
+                        <a href="https://campusvirtual.fiocruz.br/portal/" target="_blank" rel="noopener noreferrer">
+                            <button class="btn-sm botaoAvaliacao" role="button" aria-pressed="true" alt="Voltar">
+                                <strong>FAZER AVALIAÇÃO</strong>
+                            </button>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 centro botao">
+                        <p>Se não tem matrícula<br>acesse aqui:</p>
+                        <a href="https://campusvirtual.fiocruz.br/portal/" target="_blank" rel="noopener noreferrer">
+                            <button class="btn-sm botaoMatricula" role="button" aria-pressed="true" alt="Começar curso">
+                                <strong>FAZER MATRÍCULA</strong>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row" id="botao">
+                    <button class="btn btn-sm" id="botaoVoltar" role="button" aria-pressed="true" alt="Voltar"
+                        (click)="voltar()"><strong>VOLTAR</strong></button>
+                </div>
+            </div>
+            <!-- Rodapé -->
+            <app-rodape></app-rodape>
+        </div>
+    </div>
+</section>

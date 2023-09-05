@@ -1,30 +1,74 @@
-<app-menu-superior></app-menu-superior>
+<section id="3">
+  <app-menu-superior></app-menu-superior>
 
-<div class="row" id="row-main">
+  <div class="row" id="row-main">
+    <!-- Sidebar -->
+    <div class="col-md-2">
+      <app-menu-lateral></app-menu-lateral>
+    </div>
 
-  <!-- Sidebar -->
-  <div class="col-md-2">
-    <app-menu-lateral></app-menu-lateral>
+    <!-- Conteúdo principal -->
+    <div class="col-md-10" id="content">
+      <div class="conteudo">
+        <h1>Inseticidas reguladores de crescimento</h1>
+
+        <p>Com o intuito de empregar inseticidas que não comprometam a saúde humana e do ambiente, os chamados
+          reguladores
+          de crescimento de insetos (IGR’s) são inseticidas alternativos, que apresentam menor probabilidade de
+          selecionar
+          populações que possuam resistência a determinados grupos químicos, quando comparado com os inseticidas
+          convencionais de amplo espectro.</p>
+
+        <!-- Bloco marrom -->
+
+        <p>De acordo ao seu modo de ação, os IGR’s são classificados em:</p>
+
+        <ul>
+          <li>Análogos de hormônio juvenil de crescimento.</li>
+          <li>Inibidores da síntese de quitina.</li>
+          <li>Derivados de triazina.</li>
+        </ul>
+
+        <p>Os IGR’s são eficazes no controle de vários culicídeos (mosquitos, pernilongos e muriçocas) de importância em
+          saúde pública, como espécies pertencentes aos gêneros <i>Anopheles, Culex e Aedes</i> (Hoffmann & Lorenz 1998;
+          Khan <i>et
+            al</i>. 2016).</p>
+      </div>
+
+      <div class="row curiosidade">
+        <div class="col-md-2">
+          <img src="../../../../assets/images/icones/curiosidade.png" alt="Curiosidade" class="img-fluid">
+        </div>
+        <div class="col-md-10">
+          <p>CURIOSIDADE:</p>
+          <p><b>Quais são os IGR’s recomendados?</b></p>
+          <p>O piriproxifem, que é um análogo de hormônio juvenil de crescimento, classifica-se dentre os IGR,
+            recomendados pelo Ministério de Saúde e a OMS para o controle de <i>Aedes aegypti</i>, inclusive em água
+            para
+            consumo humano (IPCS 2002, WHO 2008; MS 2017).</p>
+
+          <p>O piriproxifem pertence à classe química éter-piridil-oxipropílico, é eficaz em doses muito baixas e
+            praticamente sem toxicidade para vertebrados (incluindo o ser humano e os animais domésticos), impede o
+            desenvolvimento normal dos mosquitos imaturos, que morrem no estágio de larva ou (mais comumente) de pupa. O
+            piriproxifem não tem efeitos letais imediatos nos mosquitos adultos, mas encurta a vida das fêmeas e impede
+            o desenvolvimento dos ovos fecundados (Sihuincha et al. 2005, Devine et al. 2009, Ohashi et al. 2012).</p>
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <!-- Botão Início Aula 1 -->
+        <div class="row" id="botao">
+          <button class="btn btn-sm" id="botaoVoltar" role="button" aria-pressed="true" alt="Voltar"
+            (click)="voltar()"><strong>VOLTAR</strong></button>
+          <button class="btn btn-sm" id="botaoAvancar" role="button" aria-pressed="true" alt="Começar curso"
+            (click)="ir()">
+            <strong>AVANÇAR</strong>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <app-rodape></app-rodape>
   </div>
-
-  <!-- Conteúdo principal -->
-  <div class="col-md-10" id="content">
-      <section id="section4">
-        <h2>Section 1</h2>
-        <p>Content of section 1.</p>
-      </section>
-
-      <section id="section5">
-        <h2>Section 2</h2>
-        <p>Content of section 2.</p>
-      </section>
-
-      <section id="section6">
-        <h2>Section 3</h2>
-        <p>Content of section 3.</p>
-      </section>
-  </div>
-
-  <!-- Rodapé -->
-  <app-rodape></app-rodape>
-</div>
+</section>

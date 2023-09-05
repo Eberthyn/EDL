@@ -1,0 +1,55 @@
+label {
+    color: #9A7265;
+}
+
+input {
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    border: 1px solid;
+    margin-right: 1rem;
+    margin-top: 2px;
+}
+
+.resposta-correta {
+    color: #0ABC3A !important;
+}
+
+.resposta-incorreta {
+    color: #F8062C !important;
+}
+
+/* label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #9A7265;
+}
+.radio-btn {
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    border: 1px solid;
+    display: block;
+    margin-right: 1rem;
+}
+.input-radio{
+    position: absolute;
+   
+}
+input[type="radio"]:checked + label{
+    color: #0ABC3A;
+
+}
+input[type="radio"] + label{
+
+    -webkit-box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.2);
+}
+input[type="radio"]:checked + label .radio-btn {
+    background-color: radial-gradient(circle, red 45%, transparent 50%);
+} */

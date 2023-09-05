@@ -1,0 +1,26 @@
+label {
+    color: #9A7265;
+}
+
+input {
+    min-height: 20px !important;
+    min-width: 20px !important;
+    border-radius: 100px;
+    border: 1px solid;
+    margin-right: 1rem;
+    margin-top: 2px;
+}
+
+.input-radio{
+    display: flex;
+    align-items: flex-start;
+    margin-top: 22px;
+}
+
+.resposta-correta {
+    color: #0ABC3A !important;
+}
+
+.resposta-incorreta {
+    color: #F8062C !important;
+}

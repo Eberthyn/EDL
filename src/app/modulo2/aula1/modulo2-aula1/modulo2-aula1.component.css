@@ -1,0 +1,99 @@
+/* Accordions */
+#acordeao {
+    padding-bottom: 45px;
+}
+
+#acordeao ul {
+    padding: 0px;
+}
+
+#acordeao .card-body {
+    background-color: #F5F5F5;
+}
+
+.card {
+    border: 0px;
+    position: relative;
+}
+
+.card-header {
+    border-width: 1px;
+    border-color: #3D3D3D;
+}
+
+.card-header a {
+    cursor: pointer;
+}
+
+.card-header p {
+    color: #3D3D3D;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.accordion .card-body {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+
+}
+
+.card-body ul li {
+    list-style: none;
+}
+
+.accordion .collapsed i:before {
+    content: "\f0d7";
+}
+
+/*Carousel*/
+.carousel-item {
+    text-align: left;
+}
+
+.sliderCard{
+    height: 420px;
+    width: 340px;
+    /* 360x280 mobile */
+}
+.carousel-indicators li {
+    width: 32px;
+    height: 6px;
+    border-radius: 25px;
+}
+
+.carousel-indicators li {
+    background-color: #B7B7B7;
+}
+
+.carousel-indicators .active {
+    background-color: #2F6C48;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    filter: invert(100%);
+    cursor: pointer;
+    margin: -32px;
+}
+
+.teste{
+    color: red !important;
+}
+
+.tooltip-inner {
+    background-color: #158087;
+    color: white;
+    text-align: left;
+}
+
+.tooltip .arrow:before {
+    border-top-color: #158087 !important;
+}
+
+  area{
+    cursor: pointer;
+  }
