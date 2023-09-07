@@ -1,6 +1,6 @@
 /*Page Home*/
 .capa{
-    background-image: url(../../assets/images/home/imgCapa.png);
+    /* background-image: url(../assets/images/home/imgCapa.png); */
     background-size: cover;
     background-position: center;
     display: flex;
