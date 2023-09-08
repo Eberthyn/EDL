@@ -18,6 +18,9 @@
     padding: 1.5% 0;
     width: 30% !important;
 }
+.conteudoHome{
+    padding: 0px 18% !important;
+}
 
 @media screen and (max-width: 580px) {
     .fundoCapa img{

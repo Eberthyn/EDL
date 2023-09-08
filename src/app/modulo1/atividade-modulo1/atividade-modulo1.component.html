@@ -16,17 +16,19 @@
                 <div>
                     <ol>
                         <li *ngFor="let pergunta of perguntas">
-                            {{ pergunta.texto }}
+                            {{ pergunta.texto }} <br>
 
-                            <div *ngFor="let opcao of opcoesResposta">
-                                <input class="input-radio" type="radio" [(ngModel)]="pergunta.resposta"
-                                    [name]="pergunta.id" [value]="opcao.valor" (change)="verificarResposta(pergunta)">
-
-                                <label
-                                    [ngClass]="{'resposta-correta': pergunta.resposta === opcao.valor && pergunta.resposta === pergunta.respostaCorreta, 'resposta-incorreta': pergunta.resposta === opcao.valor && pergunta.resposta !== pergunta.respostaCorreta}">
-                                    <div class="radio-btn"></div>
-                                    {{opcao.texto}}
-                                </label>
+                            <div class="alternativas">
+                                <div *ngFor="let opcao of opcoesResposta">
+                                    <input class="input-radio" type="radio" [(ngModel)]="pergunta.resposta"
+                                        [name]="pergunta.id" [value]="opcao.valor"
+                                        (change)="verificarResposta(pergunta)">
+                                    <label
+                                        [ngClass]="{'resposta-correta': pergunta.resposta === opcao.valor && pergunta.resposta === pergunta.respostaCorreta, 'resposta-incorreta': pergunta.resposta === opcao.valor && pergunta.resposta !== pergunta.respostaCorreta}">
+                                        <div class="radio-btn"></div>
+                                        {{opcao.texto}}
+                                    </label>
+                                </div>
                             </div>
 
                             <p>{{ pergunta.resultado }}</p>
