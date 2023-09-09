@@ -89,11 +89,11 @@
 }
 
 .carousel-control-next-icon {
-    background-image: url(/assets/images/icones/next.png);
+    background-image: url('/assets/images/icones/next.png');
 }
 
 .carousel-control-prev-icon {
-    background-image: url(/assets/images/icones/prev.png);
+    background-image: url('/assets/images/icones/prev.png');
 }
 
 .carousel-control-prev-icon,
