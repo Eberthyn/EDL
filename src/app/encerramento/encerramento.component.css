@@ -10,12 +10,25 @@
     width: 166px;
     height: 44px;
     color: white;
+    cursor: pointer;
+    border: 0;
+}
+
+.instrucaoBtn {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 10px 0px;
+    text-align: center;
 }
 
 .botao {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+#botaoVoltar {
+    margin: 45px 0px 65px 0px;
 }
 
 li {

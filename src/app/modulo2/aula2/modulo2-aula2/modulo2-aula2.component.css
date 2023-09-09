@@ -1,0 +1,10 @@
+.atencao {
+    margin-bottom: 0px;
+    font-weight: 700;
+    color: #9A7265;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #9A7265;
+}

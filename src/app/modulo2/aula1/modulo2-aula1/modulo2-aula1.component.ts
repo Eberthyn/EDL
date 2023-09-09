@@ -30,7 +30,6 @@ export class Modulo2Aula1Component {
 
   ngAfterViewInit(): void {
     imageMapResize();
-    console.log(this.areas)
   }
 
   @HostListener('window:resize', ['$event'])
