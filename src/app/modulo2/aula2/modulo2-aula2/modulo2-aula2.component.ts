@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import imageMapResize from 'image-map-resizer';
 
@@ -11,7 +11,7 @@ declare var UnTip: any;
   templateUrl: './modulo2-aula2.component.html',
   styleUrls: ['./modulo2-aula2.component.css']
 })
-export class Modulo2Aula2Component {
+export class Modulo2Aula2Component implements AfterViewInit{
 
   areas = [
     { alt: "a", title: "<b>Nº EDL:</b><br>Número da<br> Estação Disseminadora<br> definida para o imóvel.", coords: '13,86,22' },

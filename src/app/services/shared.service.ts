@@ -22,10 +22,40 @@ export class SharedService {
     }
   }
 
-  /* Abre com menu recolhido em Tablet e smartphone */
-  resize() {
-    let tam = screen.width;
-    if (tam <= 980) {
+  paginaSemScroll() {
+    const windowHeight = window.innerHeight;
+    const bodyHeight = document.body.scrollHeight;
+
+    // if (bodyHeight <= windowHeight) {
+    //   $('#row-main').css('padding-bottom', $('.tst').outerHeight() + 'px');
+    // } else {
+    //   $('footer').removeClass('tst');
+    //   $('#row-main').css('padding-bottom', '0');
+    // };
+  }
+
+/* Abre com menu recolhido em Tablet e smartphone */
+resize() {
+  let tam = screen.width;
+  if (tam <= 980) {
+    $("#sidebar, #menuLateral").addClass("esconder");
+    $("#sidebar").removeClass("col-md-2");
+    $("#sidebarButton").addClass("open");
+    $("#content").addClass("col-md-12");
+    $("#content").removeClass("col-md-10");
+  } else {
+    $("#sidebar, #menuLateral").removeClass("esconder");
+    $("#sidebar").addClass("col-md-2");
+    $("#sidebarButton").removeClass("open");
+    $("#content").removeClass("col-md-12");
+    $("#content").addClass("col-md-10");
+  }
+
+  // Recolhe menu ao reduzir tela no desktop //
+  $(window).on("resize", function () {
+    let win = screen.width;
+
+    if (win < 980) {
       $("#sidebar, #menuLateral").addClass("esconder");
       $("#sidebar").removeClass("col-md-2");
       $("#sidebarButton").addClass("open");
@@ -38,31 +68,13 @@ export class SharedService {
       $("#content").removeClass("col-md-12");
       $("#content").addClass("col-md-10");
     }
+  });
+}
 
-    // Recolhe menu ao reduzir tela no desktop //
-    $(window).on("resize", function () {
-      let win = screen.width;
-
-      if (win < 980) {
-        $("#sidebar, #menuLateral").addClass("esconder");
-        $("#sidebar").removeClass("col-md-2");
-        $("#sidebarButton").addClass("open");
-        $("#content").addClass("col-md-12");
-        $("#content").removeClass("col-md-10");
-      } else {
-        $("#sidebar, #menuLateral").removeClass("esconder");
-        $("#sidebar").addClass("col-md-2");
-        $("#sidebarButton").removeClass("open");
-        $("#content").removeClass("col-md-12");
-        $("#content").addClass("col-md-10");
-      }
-    });
-  }
-
-  /*Collapse Sidebar*/
-  toggleSidebar() {
-    $("#sidebar, #menuLateral").toggleClass("esconder");
-    $("#content").toggleClass("col-md-12 col-md-10");
-    $("#sidebarButton").toggleClass("open");
-  };
+/*Collapse Sidebar*/
+toggleSidebar() {
+  $("#sidebar, #menuLateral").toggleClass("esconder");
+  $("#content").toggleClass("col-md-12 col-md-10");
+  $("#sidebarButton").toggleClass("open");
+};
 }
