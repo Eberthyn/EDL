@@ -66,6 +66,10 @@ footer {
     margin: 0px !important;
 }
 
+.row #row-main {
+    z-index: 1;
+}
+
 .estilo {
     margin-left: 9.5% !important;
     background-color: #2E4057;
@@ -276,23 +280,8 @@ p.tituloLista {
 }
 
 @media (max-width: 980px) {
-    .stepContainer {
-        width: 50%;
-        height: 100%;
-        background-color: #F5F5F5;
-        position: fixed;
-        z-index: 1;
-        overflow: auto;
-        display: block;
-    }
-
-    #sidebarButton {
-        display: none;
-    }
-
-    .esconder {
-        display: block;
-        margin-left: -50%;
+    #sidebar {
+        width: 50% !important;
     }
 
     footer img {
@@ -303,10 +292,6 @@ p.tituloLista {
 
 /* Smartphone */
 @media (max-width: 480px) {
-    .accordion ul {
-        padding-inline-start: 0px;
-    }
-
     .blocoTexto {
         padding: 30px 30px 10px 30px !important;
     }
@@ -318,7 +303,6 @@ p.tituloLista {
 }
 
 @media (max-width: 340px) {
-
     #botaoAvancar,
     #botaoVoltar {
         margin: 45px 0px 65px 0px;
@@ -375,31 +359,8 @@ ul li {
 }
 
 @media (max-width: 980px) {
-    .stepContainer {
-        width: 50%;
-        height: 100%;
-        background-color: #F5F5F5;
-        position: fixed;
-        z-index: 1;
-        overflow: auto;
-        display: block;
-    }
-
-    #sidebarButton {
-        display: none;
-    }
-
-    .esconder {
-        display: block;
-        margin-left: -50%;
-    }
-
     .logo {
         max-width: 35%;
-    }
-
-    .step:last-child .line {
-        height: 80%;
     }
 }
 

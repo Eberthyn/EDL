@@ -12,6 +12,6 @@ export class EncerramentoComponent {
   ) { }
 
   voltar() {
-    this.router.navigate(['modulo2-aula5'])
+    this.router.navigate(['atividade-modulo2'])
   }
 }

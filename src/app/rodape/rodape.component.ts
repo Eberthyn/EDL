@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { SharedService } from '../services/shared.service';
-
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-rodape',
@@ -8,9 +6,18 @@ import { SharedService } from '../services/shared.service';
   styleUrls: ['./rodape.component.css']
 })
 export class RodapeComponent implements OnInit {
-  constructor(private sharedService: SharedService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.sharedService.paginaSemScroll();
+    this.fixaRodape()
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: any) {
+    this.fixaRodape();
+  }
+
+  fixaRodape() {
+    return document.body.scrollHeight > window.innerHeight;
   }
 }
