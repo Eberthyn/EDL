@@ -11,6 +11,7 @@
         <div class="col-md-10" id="content">
             <!-- Introdução -->
             <div class="conteudo">
+                <p class="indice">Módulo2/Aula2</p>
                 <h1>Manutenção e registro da EDL</h1>
 
                 <p>A equipe ou responsável pela estratégia do município entregará ao profissional de campo, a relação de
@@ -100,7 +101,7 @@
                     class="img-fluid imagem-mapeada" usemap="#image-map">
 
                 <map name="image-map">
-                    <area *ngFor="let area of areas" [coords]="area.coords" [title]="area.title" shape="circle"
+                    <area *ngFor="let area of areas" target="" [coords]="area.coords" [title]="area.title" shape="circle"
                         (mouseover)="showTooltip(area.title)" (mouseout)="hideTooltip()">
                 </map>
             </div>
@@ -122,7 +123,7 @@
                     </div>
                     <div class="col-lg-4 centro">
                         <div class="row">
-                            <!-- <img src="assets/images/icones/alerta.png" alt="Atenção" class="imgfluid"> -->
+                            <img src="assets/images/icones/alerta.png" alt="Atenção" class="imgfluid">
                             <p class="atencao">ATENÇÃO</p>
                             <hr>
 

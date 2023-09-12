@@ -73,6 +73,10 @@ export class MenuLateralComponent implements OnInit {
         section.id === '14')
   }
 
+  introducao(section: any) {
+    return (section.id === '1')
+  }
+
   isSectionInView(section: any): boolean {
     return this.activeSection === section.id;
   }

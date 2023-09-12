@@ -22,9 +22,11 @@
 }
 
 .botao {
+    margin-top: 45px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    align-items: center;
 }
 
 #botaoVoltar {
@@ -33,4 +35,8 @@
 
 li {
     list-style: none;
+}
+
+.campusVirtual {
+    justify-content: center;
 }

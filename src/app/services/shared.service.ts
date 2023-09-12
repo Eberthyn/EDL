@@ -6,8 +6,7 @@ import * as $ from "jquery";
 })
 export class SharedService {
 
-  constructor(
-  ) { }
+  constructor() { }
 
   // Fixa o Menu Superior
   onWindowScroll() {
@@ -24,8 +23,7 @@ export class SharedService {
 
   /*Collapse Sidebar*/
   toggleSidebar() {
-    $("#menuLateral").toggleClass("esconder");
-    $('#sidebar').toggleClass('col-md-2')
+    $("#menuLateral, #sidebar").toggleClass("esconder");
     $("#content").toggleClass("col-md-12 col-md-10");
     $("#sidebarButton").toggleClass("open");
     $("#sidebarButton2").toggleClass("open");

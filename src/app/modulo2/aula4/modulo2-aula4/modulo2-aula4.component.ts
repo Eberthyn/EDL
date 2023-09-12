@@ -14,11 +14,11 @@ declare var UnTip: any;
 export class Modulo2Aula4Component implements AfterViewInit {
 
   areas = [
-    { alt: "a", title: "<b>Nº EDL:</b><br>Número da<br> Estação Disseminadora<br> definida para o imóvel.", coords: '37,156,24' },
-    { alt: "b", title: "<b>Logradouro (nome, número):</b><br>Colocar o endereço<br> completo, atualizado e<br> vigente do imóvel.", coords: '193,156,25' },
-    { alt: "c", title: "<b>Local de instalação:</b><br>Local no imóvel onde ficou<br> a EDL, o qual foi definido<br> junto com o residente no<br> momento da implantação.", coords: '391,156,25' },
-    { alt: "d", title: "<b>Responsável do imóvel:</b><br>Pessoa que autorizou a<br> entrada ao domicílio e<br> acompanhou a instalação das EDL's.", coords: '522,161,26' },
-    { alt: "e", title: "<b>Profissional encarregado da manutenção:</b><br>Profissional de campo encarregado<br> da manutenção mensal da EDL,<br> designado pelo gestor ou<br> profissional encarregado da<br> estratégia no município.", coords: '640,161,26' },
+    { alt: "a", title: "<b>Nº EDL:</b><br>Número da<br>Estação Disseminadora<br>definida para o imóvel.", coords: '37,156,24' },
+    { alt: "b", title: "<b>Logradouro (nome, número):</b><br>Colocar o endereço<br>completo, atualizado e<br>vigente do imóvel.", coords: '193,156,25' },
+    { alt: "c", title: "<b>Local de instalação:</b><br>Local no imóvel onde ficou<br>a EDL, o qual foi definido<br>junto com o residente no<br>momento da implantação.", coords: '391,156,25' },
+    { alt: "d", title: "<b>Responsável do imóvel:</b><br>Pessoa que autorizou a<br>entrada ao domicílio e<br>acompanhou a instalação das EDL's.", coords: '522,161,26' },
+    { alt: "e", title: "<b>Profissional encarregado da manutenção:</b><br>Profissional de campo encarregado<br>da manutenção mensal da EDL,<br>designado pelo gestor ou<br>profissional encarregado da<br>estratégia no município.", coords: '640,161,26' },
     { alt: "f", title: "<b>Mês da última vez que o<br> profissional visitou o imóvel:</b><br> Mês no qual o profissional de campo<br> visitou por última vez o imóvel<br> para realizar manutenção da<br> EDL (informação disponibilizada<br> pelo residente).", coords: '755,162,25' },
     { alt: "g", title: "<b>Realizou-se a aplicação do larvicida?:</b><br>Verificar se o profissional<br> realizou a re-impregnação<br> do piriproxifem<br> na EDL instalada.", coords: '871,163,26' },
     { alt: "h", title: "<b>Nível de água na EDL:</b><br>Verificar o nível de água da<br> EDL e marcar *Seca*, se a<br> EDL se encontra sem água<br> no momento da manutenção;<br> *< 50%*, se a<br> EDL se encontra com o<br> nível de água embaixo da<br> metade do pote; e *>= 50%*,<br> se a EDL se encontra com o<br> nível de água acima da<br> metade do pote.", coords: '955,93,25' },

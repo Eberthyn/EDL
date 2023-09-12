@@ -1,6 +1,6 @@
+@import './assets/normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import './assets/normalize.css';
 
 body,
 header,
@@ -228,6 +228,11 @@ p {
     margin-bottom: 30px;
 }
 
+p.indice {
+    margin-bottom: -35px;
+    margin-top: 50px;
+}
+
 p.tituloLista {
     margin: 0px;
     font-weight: bold;
@@ -255,7 +260,7 @@ p.tituloLista {
 
 /* Conteúdo em Abas */
 .nav-tabs a {
-    font-weight: 700;
+    font-weight: bold;
     min-width: 150px;
     display: flex;
     justify-content: center;
@@ -270,7 +275,7 @@ p.tituloLista {
     background-color: #2F6C48 !important;
     border-color: #2F6C48 !important;
     color: white !important;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 .nav-tabs .nav-link {

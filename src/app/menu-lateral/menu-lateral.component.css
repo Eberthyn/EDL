@@ -3,7 +3,7 @@ nav {
   padding-top: 32px;
   padding-left: 8px;
   width: 16.667%;
-  max-height: 100vh;
+  height: 100vh;
   position: fixed;
   z-index: 2;
   overflow: auto;
@@ -19,21 +19,38 @@ ul {
   padding: 0;
   margin: 0;
 }
-a mat-icon{
-  font-size: 6px !important;
-  height: 6px;
-  width: 6px;
+
+.sectionTitle mat-icon {
+  font-size: 4px !important;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  margin-left: 22px;
+  margin-top: 8px;
 }
-.listaMenu{
+
+.listaMenu {
   padding-bottom: 150px;
 }
 
 a {
   text-decoration: none;
   color: #333;
-  padding: 4px 8px;
+  padding: 0px 8px;
   display: block;
   cursor: pointer;
+  font-size: 14px;
+  padding-left: 2rem;
+}
+.introducao {
+  padding-top: 0px !important;
+}
+
+a.tituloLista {
+  padding-top: 22px;
+  margin: 0px;
+  font-weight: bold;
+  padding-left: 8px;
 }
 
 /* Stepper */
@@ -44,7 +61,6 @@ a {
 
 .sectionTitle {
   width: 90%;
-  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -112,7 +128,7 @@ a {
   #sidebarButton {
     display: none;
   }
-        
+
   .esconder {
     display: none;
   }
@@ -120,11 +136,11 @@ a {
 
 @media (min-width: 980px) {
   .esconder {
-      display: block;
-      margin-left: -16.6667%;
+    display: block;
+    margin-left: -16.6667%;
   }
 
   #sidebarButton2 {
-      display: none;
+    display: none;
   }
 }

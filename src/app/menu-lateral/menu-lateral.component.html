@@ -11,10 +11,9 @@
       <div class="row">
         <div class="barraStepper" [class.active]="isSectionInView(section)"></div>
         <div class="sectionTitle">
-          <p [ngClass]="{'tituloLista': subItem(section)}">
-            <a (click)="goToSection(section)"><mat-icon *ngIf="!subItem(section)">circle</mat-icon>
-              {{ section.title }}</a>
-          </p>
+          <mat-icon *ngIf="!subItem(section)">circle</mat-icon><a [ngClass]="{'tituloLista': subItem(section), 'introducao': introducao(section)}"
+            (click)="goToSection(section)">
+            {{ section.title }}</a>
         </div>
       </div>
     </li>
