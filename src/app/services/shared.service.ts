@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as $ from "jquery";
+import imageMapResize from 'image-map-resizer';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +28,7 @@ export class SharedService {
     $("#content").toggleClass("col-md-12 col-md-10");
     $("#sidebarButton").toggleClass("open");
     $("#sidebarButton2").toggleClass("open");
+    imageMapResize();
   };
 
   /* Abre com menu recolhido em Tablet e smartphone */

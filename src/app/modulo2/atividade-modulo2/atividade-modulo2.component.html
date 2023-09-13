@@ -25,7 +25,7 @@
                                 <label
                                     [ngClass]="{'resposta-correta': pergunta.resposta === opcao.valor && pergunta.resposta === pergunta.respostaCorreta, 'resposta-incorreta': pergunta.resposta === opcao.valor && pergunta.resposta !== pergunta.respostaCorreta}">
                                     <div class="radio-btn"></div>
-                                    {{opcao.texto}}
+                                    <b>{{opcao.texto}}</b>
                                 </label>
                             </div>
                             <br>
