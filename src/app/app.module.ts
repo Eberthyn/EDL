@@ -5,7 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCommonModule } from '@angular/material/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, APP_BASE_HREF, LocationStrategy, HashLocationStrategy } from '@angular/common';;
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -80,7 +80,11 @@ import { EncerramentoComponent } from './encerramento/encerramento.component';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [SharedService],
+  providers: [
+    SharedService,
+    { provide: APP_BASE_HREF, useValue: '/' },
+    { provide: LocationStrategy, useClass: HashLocationStrategy}
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
