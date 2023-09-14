@@ -37,20 +37,9 @@ export class MenuLateralComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.sharedService.windowSize();
     setTimeout(() => {
       this.highlightActiveSection();
-    }, 200);
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any): void {
-    this.sharedService.windowSize();
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
-    this.highlightActiveSection();
+    }, 100);
   }
 
   abrirMenu() {
@@ -88,5 +77,10 @@ export class MenuLateralComponent implements OnInit {
       element.scrollIntoView({ behavior: 'smooth' });
     }
     this.router.navigate([section.url]);
+  }
+
+  formatTitle(title: string): string {
+    // Substitua todas as ocorrências de "Aedes" por "<i>Aedes</i>"
+    return title.replace(/Aedes/g, '<i>Aedes</i>');
   }
 }

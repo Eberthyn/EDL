@@ -7,7 +7,7 @@
             <app-menu-lateral></app-menu-lateral>
         </div>
 
-        <div class="col-md-10" id="content">
+        <div class="col-md-10" id="content" tabindex="0">
             <div class="conteudo">
                 <p class="indice">Módulo1/Atividade</p>
                 <h1>Muito bem, você chegou ao final do módulo 1</h1>
@@ -17,7 +17,7 @@
                 <div>
                     <ol>
                         <li *ngFor="let pergunta of perguntas">
-                            {{ pergunta.texto }} <br>
+                            <span [innerHTML]="formatText(pergunta.texto, ['Aedes', 'aegypti', 'albopictus'])">{{ pergunta.texto }}</span> <br>
 
                             <div class="alternativas">
                                 <div *ngFor="let opcao of opcoesResposta">
@@ -32,7 +32,7 @@
                                 </div>
                             </div>
 
-                            <p>{{ pergunta.resultado }}</p>
+                            <p [innerHTML]="formatText(pergunta.resultado, ['Aedes', 'aegypti', 'albopictus'])">{{ pergunta.resultado }}</p>
                         </li>
                     </ol>
                 </div>

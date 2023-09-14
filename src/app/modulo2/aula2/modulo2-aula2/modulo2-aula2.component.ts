@@ -1,6 +1,5 @@
-import { AfterViewInit, Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import imageMapResize from 'image-map-resizer';
 
 // Declare a global variable for the Tip function
 declare var Tip: any;
@@ -11,7 +10,7 @@ declare var UnTip: any;
   templateUrl: './modulo2-aula2.component.html',
   styleUrls: ['./modulo2-aula2.component.css']
 })
-export class Modulo2Aula2Component implements AfterViewInit{
+export class Modulo2Aula2Component {
 
   areas = [
     { alt: "a", title: "Nº EDL: Número da<br>Estação Disseminadora<br>definida para o imóvel.", coords: '13,86,22' },
@@ -22,28 +21,20 @@ export class Modulo2Aula2Component implements AfterViewInit{
     { alt: "f", title: "Nível de água na EDL:<br>Verificar o nível de água <br>da EDL e marcar *Seca*,<br> se a EDL se encontra<br> sem água no momento<br> da manutenção; *< 50%*,<br> se a EDL se encontra com<br> o nível de água embaixo<br> da metade do pote; e<br> *>= 50%*, se a EDL se<br> encontra com o nível de<br> água acima da metade<br> do pote.", coords: '802,69,20' },
     { alt: "g", title: "Tipo de novidades: Marcar<br> com X a novidade apresentada<br> no momento da manutenção.", coords: '1001,69,19' },
     { alt: "h", title: "Observações:<br>Informações adicionais que<br>o ACE acredite necessárias<br>para complementar a vistoria<br>realizada ou condições que<br>possam comprometer a<br>qualidade da EDL.", coords: '1190,69,21' },
-    { alt: "1", title: "Presença de larvas:<br>Presença de larvas de <i>Ae.<br> Aegypti ou Ae. Albopictus</i><br>na água contida no<br>interior da EDL.", coords: "875,148,17"},
-    { alt: "2", title: "Presença de pupas:<br>Presença de pupas de<br><i>Ae. Aegypti ou Ae.<br>Albopictus</i> na água <br>contida no interior<br> da EDL.", coords: "913,149,18"},
-    { alt: "3", title: "Tecido desaparecido:<br>Ausência do tecido <br>no momento da<br>manutenção da EDL.", coords: "950,149,15"},
-    { alt: "4", title: "Imóvel fechado:<br>No momento da visita<br>para a manutenção da<br>EDL, o imóvel se<br>encontra fechado.", coords: "986,149,16"},
-    { alt: "5", title: "Estação Disseminadora<br>não instalada:<br>No momento da visita<br> para a manutenção da EDL,<br> o residente informou que a <br>EDL nunca foi instalada, o<br>qual pode acontecer por<br>erros no preenchimento ou<br>digitação do endereço.", coords: "1022,149,15"},
-    { alt: "6", title: "Estação Disseminadora<br> desaparecida:<br> No momento da visita<br> para a manutenção da<br> EDL, o profissional não <br>localiza a EDL no local<br> de instalação, o qual <br>pode acontecer porque <br>a EDL é reaproveitada <br>para outros fins ou <br>foi descartada por<br> desconhecimento do<br>objetivo da EDL no imóvel.", coords: "1056,149,15"},
-    { alt: "7", title: "Estação Disseminadora<br> quebrada:<br>EDL danificada que<br>impeça seu bom<br>funcionamento.", coords: "1089,148,15"},
-    { alt: "8", title: "Estação Disseminadora retirada:<br>EDL retirada do imóvel por<br> desistência de participação<br> ou mudança do residente,<br> ou dificuldade de acesso<br> ao imóvel, em pelo menos<br> duas visitas de manutenção.", coords: "1124,149,16"}
+
+    { alt: "1", title: "Presença de larvas:<br>Presença de larvas de <i>Ae.<br> Aegypti ou Ae. Albopictus</i><br>na água contida no<br>interior da EDL.", coords: "875,148,17" },
+    { alt: "2", title: "Presença de pupas:<br>Presença de pupas de<br><i>Ae. Aegypti ou Ae.<br>Albopictus</i> na água <br>contida no interior<br> da EDL.", coords: "913,149,18" },
+    { alt: "3", title: "Tecido desaparecido:<br>Ausência do tecido <br>no momento da<br>manutenção da EDL.", coords: "950,149,15" },
+    { alt: "4", title: "Imóvel fechado:<br>No momento da visita<br>para a manutenção da<br>EDL, o imóvel se<br>encontra fechado.", coords: "986,149,16" },
+    { alt: "5", title: "Estação Disseminadora<br>não instalada:<br>No momento da visita<br> para a manutenção da EDL,<br> o residente informou que a <br>EDL nunca foi instalada, o<br>qual pode acontecer por<br>erros no preenchimento ou<br>digitação do endereço.", coords: "1022,149,15" },
+    { alt: "6", title: "Estação Disseminadora<br> desaparecida:<br> No momento da visita<br> para a manutenção da<br> EDL, o profissional não <br>localiza a EDL no local<br> de instalação, o qual <br>pode acontecer porque <br>a EDL é reaproveitada <br>para outros fins ou <br>foi descartada por<br> desconhecimento do<br>objetivo da EDL no<br> imóvel.", coords: "1056,149,15" },
+    { alt: "7", title: "Estação Disseminadora<br> quebrada:<br>EDL danificada que<br>impeça seu bom<br>funcionamento.", coords: "1089,148,15" },
+    { alt: "8", title: "Estação Disseminadora retirada:<br>EDL retirada do imóvel por<br> desistência de participação<br> ou mudança do residente,<br> ou dificuldade de acesso<br> ao imóvel, em pelo menos<br> duas visitas de manutenção.", coords: "1124,149,16" }
   ]
 
   constructor(
     private router: Router
   ) { }
-
-  ngAfterViewInit(): void {
-    imageMapResize();
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any): void {
-    imageMapResize();
-  }
 
   showTooltip(tooltipText: string) {
     // Exibe o tooltip com o texto fornecido

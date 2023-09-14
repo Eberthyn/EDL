@@ -12,7 +12,7 @@
         <div class="barraStepper" [class.active]="isSectionInView(section)"></div>
         <div class="sectionTitle">
           <mat-icon *ngIf="!subItem(section)">circle</mat-icon><a [ngClass]="{'tituloLista': subItem(section), 'introducao': introducao(section)}"
-            (click)="goToSection(section)">
+            (click)="goToSection(section)" [innerHTML]="formatTitle(section.title)">
             {{ section.title }}</a>
         </div>
       </div>

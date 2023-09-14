@@ -13,7 +13,7 @@ export class AtividadeModulo1Component {
       id: '1',
       texto: 'As fêmeas grávidas de Aedes aegypti e Aedes albopictus distribuem os ovos de uma mesma postura, em DIFERENTES depósitos com água. Esta afirmativa é:',
       resposta: null,
-      resultado: null,
+      resultado: '',
       respostaCorreta: 'verdadeiro',
       respostaCorretaTexto: 'Correto, os ovos de Aedes aegypti e Aedes albopictus são postos, diretamente sobre a superfície líquida ou em substrato úmido, acima da coluna de água, porém uma mesma postura pode ser distribuída em diferentes substratos “oviposição em saltos”, estratégia que permite aumentar a sobrevivência e dispersão desses mosquitos.',
       respostaErradaTexto: 'Errado, embora possam concentrá-los em um único local de oviposição, a maioria de vezes, uma mesma postura pode ser distribuída em diferentes substratos “oviposição em saltos”, estratégia que permite aumentar a sobrevivência e dispersão desses mosquitos.'
@@ -22,7 +22,7 @@ export class AtividadeModulo1Component {
       id: '2',
       texto: 'A disseminação de larvicida pelos próprios mosquitos é SUFICIENTE para diminuir a infestação de mosquitos Aedes. Esta afirmativa é:',
       resposta: null,
-      resultado: null,
+      resultado: '',
       respostaCorreta: 'falso',
       respostaCorretaTexto: 'Correto, as arboviroses são doenças multifatoriais, e as medidas de controle vetorial em cada localidade devem ser avaliadas segundo o cenário epidemiológico, características sociodemográficas, capacidade operacional e recursos próprios dos programas de controle locais. Apesar de que a estratégia de disseminação de larvicida apresenta resultados promissores no controle de Aedes (especialmente em criadouros crípticos e de difícil acesso), se considera uma estratégia complementar às ações de rotina nos programas de controle vetorial.',
       respostaErradaTexto: 'Errado, a Organização Pan-Americana de Saúde e o Ministério da Saúde, orientam aos tomadores de decisões para aplicar o Manejo Integrado de Vetores (MIV) para o monitoramento e controle de vetores, visando otimizar o uso de recursos direcionados aos programas de controle, melhorar a eficácia e a eficiência das ações, através de análise situacional, desenho de operação e planejamento, implementação, monitoramento e avaliação.'
@@ -58,5 +58,14 @@ export class AtividadeModulo1Component {
 
   todasAsRespostasForamSelecionadas(): boolean {
     return this.perguntas.every((pergunta) => pergunta.resposta !== null);
+  }
+
+  formatText(title: string, wordsToItalicize: string[]): string {
+    // Iterar por todas as palavras a serem formatadas em itálico e substituí-las
+    let formattedTitle = title;
+    wordsToItalicize.forEach(word => {
+      formattedTitle = formattedTitle.replace(new RegExp(word, 'g'), `<i>${word}</i>`);
+    });
+    return formattedTitle;
   }
 }

@@ -6,18 +6,31 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./rodape.component.css']
 })
 export class RodapeComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit() {
-    this.fixaRodape()
+  rodapeFixo = false;
+  constructor() {
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: any) {
+  ngOnInit() {
+    setTimeout(() => {
+      this.fixaRodape()
+    }, 50);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    this.fixaRodape();
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
     this.fixaRodape();
   }
 
   fixaRodape() {
-    return document.body.scrollHeight > window.innerHeight;
+    if (document.body.scrollHeight >= window.innerHeight) {
+      return this.rodapeFixo = false;
+    } else {
+      return this.rodapeFixo = true;
+    }
   }
 }

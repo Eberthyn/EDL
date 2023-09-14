@@ -13,7 +13,7 @@ export class AtividadeModulo2Component {
       id: '1',
       texto: 'As EDL’s devem ser instaladas em locais como:',
       resposta: null,
-      resultado: null,
+      resultado: '',
       respostaCorreta: 'b',
       respostaCorretaTexto: 'Correto, áreas como áreas de serviço, quintais, jardins, varandas, galpões, entre outros, são indicados para instalação de EDL’s, porém em ambientes de sombra e protegidos da chuva e do sol.',
       respostaErradaTexto: 'Errado. As EDL’s devem ser instaladas em ambientes de sombra e protegidos da chuva e do sol, porém devem ser instaladas em locais abertos, para permitir a disseminação do larvicida pelas fêmeas para outros depósitos. Devem ser instaladas até 1,5m aumentando assim a oportunidade de visita das fêmeas de Aedes. As EDL’s devem ficar distante do manuseio de crianças para evitar danos ao dispositivo. O piriproxifem é eficaz em doses muito baixas e praticamente sem toxicidade para vertebrados (incluindo o ser humano e os animais domésticos).'
@@ -51,5 +51,14 @@ export class AtividadeModulo2Component {
 
   todasAsRespostasForamSelecionadas(): boolean {
     return this.perguntas.every((pergunta) => pergunta.resposta !== null);
+  }
+
+  formatText(title: string, wordsToItalicize: string[]): string {
+    // Iterar por todas as palavras a serem formatadas em itálico e substituí-las
+    let formattedTitle = title;
+    wordsToItalicize.forEach(word => {
+      formattedTitle = formattedTitle.replace(new RegExp(word, 'g'), `<i>${word}</i>`);
+    });
+    return formattedTitle;
   }
 }
