@@ -9,7 +9,12 @@ import { Router } from '@angular/router';
 export class IntroducaoComponent {
   constructor(
     private router: Router
-  ) { }
+  ) {
+    /* Adiciona tooltip (Abas) */
+    $(function () {
+      (<any>$('[data-toggle="tooltip"]')).tooltip()
+    })
+  }
 
   ir() {
     this.router.navigate(['introducao-modulo1'])
